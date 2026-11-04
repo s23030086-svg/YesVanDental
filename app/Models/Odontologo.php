@@ -7,5 +7,18 @@ use Illuminate\Database\Eloquent\Model;
 
 class Odontologo extends Model
 {
-     use HasFactory;
+    use HasFactory;
+
+    protected $table = 'odontologos';
+
+    protected $primaryKey = 'id_odontologo';
+
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'cedula_profesional',
+        'especialidad',
+        'telefono',
+        'correo'
+    ];
 }

@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Tratamiento extends Model
 {
-     use HasFactory;
+    use HasFactory;
+
+    protected $table = 'tratamientos';
+
+    protected $primaryKey = 'id_tratamiento';
+
+    protected $fillable = [
+        'nombre_tratamiento',
+        'descripcion',
+        'costo'
+    ];
 }

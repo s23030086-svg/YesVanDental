@@ -7,5 +7,16 @@ use Illuminate\Database\Eloquent\Model;
 
 class Pago extends Model
 {
-     use HasFactory;
+    use HasFactory;
+
+    protected $table = 'pagos';
+
+    protected $primaryKey = 'id_pago';
+
+    protected $fillable = [
+        'id_cita',
+        'monto',
+        'fecha_pago',
+        'metodo_pago'
+    ];
 }

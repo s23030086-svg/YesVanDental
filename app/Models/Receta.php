@@ -7,5 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Receta extends Model
 {
-     use HasFactory;
+    use HasFactory;
+
+    protected $table = 'recetas';
+
+    protected $primaryKey = 'id_receta';
+
+    protected $fillable = [
+        'id_cita',
+        'medicamentos',
+        'indicaciones'
+    ];
 }
