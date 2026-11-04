@@ -7,5 +7,19 @@ use Illuminate\Database\Eloquent\Model;
 
 class Paciente extends Model
 {
-       use HasFactory;
+         use HasFactory;
+
+    protected $table = 'pacientes';
+
+    protected $primaryKey = 'id_paciente';
+
+    protected $fillable = [
+        'nombre',
+        'apellido',
+        'fecha_nacimiento',
+        'sexo',
+        'telefono',
+        'correo',
+        'direccion'
+    ];
 }
