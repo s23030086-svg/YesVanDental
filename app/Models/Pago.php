@@ -19,4 +19,9 @@ class Pago extends Model
         'fecha_pago',
         'metodo_pago'
     ];
+
+    public function cita()
+    {
+        return $this->belongsTo(Cita::class, 'id_cita', 'id_cita');
+    }
 }

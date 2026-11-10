@@ -21,4 +21,9 @@ class Odontologo extends Model
         'telefono',
         'correo'
     ];
+
+    public function citas()
+    {
+        return $this->hasMany(Cita::class, 'id_odontologo', 'id_odontologo');
+    }
 }

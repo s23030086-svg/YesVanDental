@@ -18,4 +18,9 @@ class Receta extends Model
         'medicamentos',
         'indicaciones'
     ];
+
+    public function cita()
+    {
+        return $this->belongsTo(Cita::class, 'id_cita', 'id_cita');
+    }
 }

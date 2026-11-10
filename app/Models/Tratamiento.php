@@ -18,4 +18,9 @@ class Tratamiento extends Model
         'descripcion',
         'costo'
     ];
+
+    public function citas()
+    {
+        return $this->hasMany(Cita::class, 'id_tratamiento', 'id_tratamiento');
+    }
 }

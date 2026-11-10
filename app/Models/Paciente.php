@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Paciente extends Model
 {
-         use HasFactory;
+    use HasFactory;
 
     protected $table = 'pacientes';
 
@@ -22,4 +22,14 @@ class Paciente extends Model
         'correo',
         'direccion'
     ];
+
+    public function citas()
+    {
+        return $this->hasMany(Cita::class, 'id_paciente', 'id_paciente');
+    }
+
+    public function expedientes()
+    {
+        return $this->hasMany(Expediente::class, 'id_paciente', 'id_paciente');
+    }
 }
